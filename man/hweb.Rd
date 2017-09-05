@@ -16,11 +16,9 @@ View the HTML version of a help file while running R from the terminal.
 Calls function \code{\link[utils]{help}} using argument \code{htmlhelp=TRUE}.
 }
 \examples{
-hweb(read.table)
+\dontrun{hweb(read.table)}
 
 }
 \seealso{
 \code{\link[utils]{help}}, \code{\link[utils]{help.start}}
 }
-\keyword{documentation}
-

@@ -21,17 +21,28 @@ exit <- function() q("no")
 #' @export
 #'
 #' @examples
-#' hweb(read.table)
+#' \dontrun{hweb(read.table)}
 #'
 #' @seealso
 #' \code{\link[utils]{help}}, \code{\link[utils]{help.start}}
-#'
-#' @keywords
-#' documentation
 
 hweb <- function(...) {
     utils::help(..., help_type = "html")
 }
+
+
+#' Clear the Current Screen/Buffer
+#'
+#' Clear the screen with a call to \code{\link[base]{system}} and \code{clear}.
+#'
+#' @details This function is merely a call to \code{system("clear")}
+#'
+#' @export
+#'
+#' @examples
+#' \dontrun{system("clear")}
+
+clear <- function() system("clear")
 
 
 #' Open a File
