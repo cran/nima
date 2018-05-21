@@ -1,3 +1,12 @@
+May 02, 2018:
+* Fix a broken unit test for R 3.5.0, changing the use of `identical` for a
+    combination of `expect_true` and `setequal`
+
+March 23, 2018:
+* Fix a broken test (due to use of `all.equal` instead of `identical`) in
+    R-devel, based on report by CRAN
+* Add hex sticker for package based on art work by GL
+
 September 20, 2016:
 * Addition of several functions, re-written DESCRIPTION file. Update of package
     version to v. 0.4.0. This version update to be released on CRAN.

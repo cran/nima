@@ -1,17 +1,25 @@
-library(nima)
 context("Checking whether attribute names are properly extracted")
 
+p <- 5
+n <- 100
+
 test_that("attrnames finds the names of the attributes of a matrix", {
-	x <- matrix(1:100, ncol = 5)
-	colnames(x) <- LETTERS[1:5]
-	expect_equal(attrnames(x), 
-		     	       c("dim", "dimnames") )
+  x <- matrix(seq_len(n), ncol = p)
+  colnames(x) <- letters[seq_len(p)]
+  expect_true(
+    setequal(
+      attrnames(x), c("dim", "dimnames")
+    )
+  )
 })
 
 test_that("attrnames finds the names of the attributes of a data frame", {
-	x <- matrix(1:100, ncol = 5)
-	colnames(x) <- LETTERS[1:5]
-	y <- data.frame(x)
-	expect_equal(attrnames(y), 
-		     	       c("names", "row.names", "class") )
+  x <- matrix(seq_len(n), ncol = p)
+  colnames(x) <- letters[seq_len(p)]
+  y <- data.frame(x)
+  expect_true(
+    setequal(
+      attrnames(y), c("names", "row.names", "class")
+    )
+  )
 })
