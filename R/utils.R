@@ -5,7 +5,7 @@
 #' @details This function is merely a call to \code{q("no")}.
 #'
 #' @export
-#
+#'
 exit <- function() q("no")
 
 
@@ -21,11 +21,13 @@ exit <- function() q("no")
 #' @export
 #'
 #' @examples
-#' \donttest{hweb(read.table)}
+#' \donttest{
+#' hweb(read.table)
+#' }
 #'
 #' @seealso
 #' \code{\link[utils]{help}}, \code{\link[utils]{help.start}}
-#
+#'
 hweb <- function(...) {
   utils::help(..., help_type = "html")
 }
@@ -40,8 +42,10 @@ hweb <- function(...) {
 #' @export
 #'
 #' @examples
-#' \donttest{system("clear")}
-#
+#' \donttest{
+#' system("clear")
+#' }
+#'
 clear <- function() system("clear")
 
 
@@ -56,8 +60,14 @@ clear <- function() system("clear")
 #' @export
 #'
 #' @examples
-#' \donttest{openfile("myplot.pdf")}
-#
+#' \dontrun{
+#' openfile("myplot.pdf")
+#' }
+#'
 openfile <- function(file) {
-  system(paste("open", file))
+  if (.Platform$OS.type == "unix") {
+    system(paste("xdg-open", file))
+  } else { ## windows
+    system(paste("open", file))
+  }
 }

@@ -9,10 +9,9 @@
 #' @export
 #'
 #' @examples
-#' x <- matrix(1:100, ncol=5)
+#' x <- matrix(1:100, ncol = 5)
 #' colnames(x) <- LETTERS[1:5]
 #' attrnames(x)
-#
 attrnames <- function(obj) {
   names(attributes(obj))
 }
