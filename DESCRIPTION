@@ -1,6 +1,6 @@
 Package: nima
 Title: Nima Hejazi's R Toolbox
-Version: 0.6.1
+Version: 0.6.2
 Authors@R: c(
     person("Nima", "Hejazi", email = "nh@nimahejazi.org",
            role = c("aut", "cre", "cph"),
@@ -24,7 +24,7 @@ Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.0.2
 NeedsCompilation: no
-Packaged: 2019-12-11 18:12:56 UTC; nsh
+Packaged: 2020-03-06 01:58:19 UTC; nsh
 Author: Nima Hejazi [aut, cre, cph] (<https://orcid.org/0000-0002-7127-2789>)
 Repository: CRAN
-Date/Publication: 2019-12-11 18:40:06 UTC
+Date/Publication: 2020-03-06 06:10:03 UTC
